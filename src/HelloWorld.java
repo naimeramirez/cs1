@@ -31,7 +31,7 @@ public class HelloWorld {
         boolean gradeBCondition = (finalGrade >= 80) && (90 > finalGrade);
         boolean gradeCCondition = (finalGrade >= 70) && (80 > finalGrade);
         boolean gradeDCondition = (finalGrade >= 60) && (70 > finalGrade);
-        boolean gradeFCondition = finalGrade > 60;
+        boolean gradeFCondition = finalGrade < 60;
 
         System.out.println("gradeACondition: " + gradeACondition);
         System.out.println("gradeBCondition: " + gradeBCondition);
@@ -39,8 +39,27 @@ public class HelloWorld {
         System.out.println("gradeDCondition: " + gradeDCondition);
         System.out.println("gradeFCondition: " + gradeFCondition);
 
+        if (gradeACondition) {
+            gradeSymbolic = 'A';
+        }
 
+        if (gradeBCondition) {
+            gradeSymbolic = 'B';
+        }
 
+        if (gradeCCondition) {
+            gradeSymbolic = 'C';
+        }
+
+        if (gradeDCondition) {
+            gradeSymbolic = 'D';
+        }
+
+        if (gradeFCondition) {
+            gradeSymbolic = 'F';
+        }
+
+        System.out.println("Final grade (letter): " + gradeSymbolic);
 
     }
 

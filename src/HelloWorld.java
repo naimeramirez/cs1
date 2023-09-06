@@ -8,18 +8,17 @@ public class HelloWorld {
         String name = "FName LName";
         System.out.println("Name: " + name);
 
-        int test1 = 95;
-        int test2 = 100;
+        int test1 = 60 ;
+        int test2 = 89 ;
 
         double testAverage = (test1 + test2) / 2.0;
 
-        int hw1 = 100;
-        int hw2 = 90;
-        int hw3 = 85;
+        int hw1 = 82 ;
+        int hw2 = 50 ;
 
-        double hwAverage = (hw1 + hw2 + hw3) / 3.0;
+        double hwAverage = (hw1 + hw2) / 2.0;
 
-        int finalExam = 50;
+        int finalExam = 63 ;
 
         double finalGrade = (0.6 * testAverage) + (0.1 * hwAverage) + (0.3 * finalExam);
 

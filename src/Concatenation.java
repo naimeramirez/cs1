@@ -6,6 +6,12 @@ public class Concatenation {
 
         String day = "Monday";
 
+        String major = "COMPUTER SCIENCE";
+
+        String connected = "Today is " + month + ", 2023. The day is " + day + ". Our study major is " + major + ".";
+
+        System.out.println(connected);
+
 
 
 

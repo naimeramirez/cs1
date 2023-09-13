@@ -1,5 +1,4 @@
-public class Concatenation {
-
+public class StringConcatenation {
     public static void main(String[] args) {
 
         String month = "September";
@@ -19,10 +18,6 @@ public class Concatenation {
         String initials = firstName.charAt(0) + "." + lastName.charAt(0) + ".";
 
         System.out.println(initials);
-
-
-
-
 
     }
 }

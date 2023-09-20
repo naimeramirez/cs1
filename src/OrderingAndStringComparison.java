@@ -19,7 +19,7 @@ public class OrderingAndStringComparison {
         String str1example = "a";
         String str2example = "b";
 
-        System.out.println(str1example.compareTo(str2)); //-1
+        System.out.println(str1example.compareTo(str2example)); //-1
 
         if (str1example.compareTo(str2example) < 0) {
             System.out.println(str1example);

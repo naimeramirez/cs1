@@ -4,27 +4,21 @@ import java.util.Scanner;
 public class Homework {
     public static void main(String[] args) {
 
-                String question = "how are you today?";
-                String answer = "I do not know";
+        Scanner scnr = new Scanner(System.in);
+        int userAgeYears;
+        int userAgeDays;
+        int userAgeMinutes;
 
-                switch (question){
-                    case "2+2":
-                        answer = "4";
-                        break;
-                    case "2+3":
-                        answer = "5";
-                        break;
-                    case "hello":
-                        answer = "hello";
-                        break;
-                    default:
-                        answer = "I do not know";
-                }
+        System.out.print("Enter your age in years: ");
+        userAgeYears = scnr.nextInt();
 
-                System.out.println("question="+question);
-                System.out.println("answer="+answer);
+        userAgeDays = userAgeYears * 365;               // Calculate days without leap years
+        userAgeDays = userAgeDays + (userAgeYears / 4); // Add days for leap years
 
+        System.out.println("You are " + userAgeDays + " days old.");
 
+        userAgeMinutes = userAgeDays * 24 * 60;         // 24 hours/day, 60 minutes/hour
+        System.out.println("You are " + userAgeMinutes + " minutes old.");
 
 
     }

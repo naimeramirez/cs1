@@ -40,6 +40,7 @@ public class Cyberburger {
                     System.out.printf("%.2f", total);
                 }
                 break;
+
             case 2:
                 price = 9.00;
                 System.out.println("Would you like cheese with that? yes/no ");
@@ -55,6 +56,7 @@ public class Cyberburger {
                     System.out.printf("%.2f", total);
                 }
                 break;
+
             case 3:
                 price = 10.00;
                 System.out.println("Would you like cheese with that? yes/no ");
@@ -70,6 +72,7 @@ public class Cyberburger {
                     System.out.printf("%.2f", total);
                 }
                 break;
+
             case 4:
                 price = 8.00;
                 total = price + (price * tax);

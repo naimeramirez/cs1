@@ -18,48 +18,78 @@ public class Cyberburger {
 
         double total;
 
+        double cheesePrice = 0.50;
+        double tax = 0.0825;
+
+        String cheese;
+        double price;
+
         switch (menu) {
-            case 1, 2, 3:
+            case 1:
+                price = 8.00;
                 System.out.println("Would you like cheese with that? yes/no ");
-                String cheese = stringScnr.nextLine();
+                cheese = stringScnr.nextLine();
 
                 if (cheese.equals("yes")) {
-                    switch (menu) {
-                        case 1:
-                            total =
-                            System.out.println("Your order is Cyberburger with cheese. Your total is $" + total);
-                        case 2:
-                            System.out.println("Your order is Double Meat Cyberburger with cheese. Your total is $" + total);
-                        case 3:
-                            System.out.println("Your order is Triple Meat Cyberburger with cheese. Your total is $" + total);
-                        default:
-                            System.out.println("error");
-                    }
-
-                } else if (cheese.equals("no")) {
-                    switch (menu) {
-                        case 1:
-                            System.out.println("Your order is Cyberburger without cheese. Your total is $" + total);
-                        case 2:
-                            System.out.println("Your order is Double Meat Cyberburger without cheese. Your total is $" + total);
-                        case 3:
-                            System.out.println("Your order is Triple Meat Cyberburger without cheese. Your total is $" + total);
-                        default:
-                            System.out.println("error");
-                    }
+                    total = price + cheesePrice + ((price + cheesePrice) * tax);
+                    System.out.print("Your order is Cyberburger with cheese. Your total is $");
+                    System.out.printf("%.2f", total);
                 } else {
-                    System.out.println("error");
+                    total = price + (price * tax);
+                    System.out.print("Your order is Cyberburger without cheese. Your total is $");
+                    System.out.printf("%.2f", total);
                 }
                 break;
+            case 2:
+                price = 9.00;
+                System.out.println("Would you like cheese with that? yes/no ");
+                cheese = stringScnr.nextLine();
 
+                if (cheese.equals("yes")) {
+                    total = price + cheesePrice + ((price + cheesePrice) * tax);
+                    System.out.print("Your order is Double Meat Cyberburger with cheese. Your total is $");
+                    System.out.printf("%.2f", total);
+                } else {
+                    total = price + (price * tax);
+                    System.out.print("Your order is Double Meat Cyberburger without cheese. Your total is $");
+                    System.out.printf("%.2f", total);
+                }
+                break;
+            case 3:
+                price = 10.00;
+                System.out.println("Would you like cheese with that? yes/no ");
+                cheese = stringScnr.nextLine();
+
+                if (cheese.equals("yes")) {
+                    total = price + cheesePrice + ((price + cheesePrice) * tax);
+                    System.out.print("Your order is Triple Meat Cyberburger with cheese. Your total is $");
+                    System.out.printf("%.2f", total);
+                } else {
+                    total = price + (price * tax);
+                    System.out.print("Your order is Triple Meat Cyberburger without cheese. Your total is $");
+                    System.out.printf("%.2f", total);
+                }
+                break;
             case 4:
-                System.out.println("Your order is Jalapeno and Cheese. Your total is $" + total);
+                price = 8.00;
+                total = price + (price * tax);
+                System.out.print("Your order is Jalapeno and Cheese. Your total is $");
+                System.out.printf("%.2f", total);
+                break;
 
             case 5:
-                System.out.println("Your order is Bacon and Cheese. Your total is $" + total);
+                price = 9.00;
+                total = price + (price * tax);
+                System.out.print("Your order is Bacon and Cheese. Your total is $");
+                System.out.printf("%.2f", total);
+                break;
 
             case 6:
-                System.out.println("Your order is Salad. Your total is $" + total);
+                price = 7.00;
+                total = price + (price * tax);
+                System.out.print("Your order is Salad. Your total is $");
+                System.out.printf("%.2f", total);
+                break;
 
             default:
                 System.out.println("Combo does not exist");

@@ -6,13 +6,21 @@ public class zybooks {
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        double initMass = 10.0;
-        double growthRate = 1.0;
-        double yearsGrow = 3;
-        double finalMass;
-        finalMass = initMass * Math.pow(1.0 + growthRate, yearsGrow);
+        double x;
+        double y;
+        double z;
 
-        System.out.println(finalMass);
+        int kidsInClass1;
+        int kidsInClass2;
+        int numClasses;
+
+        kidsInClass1 = 7;
+        kidsInClass2 = 6;
+        numClasses = 2;
+
+        System.out.println((double)(kidsInClass1 + kidsInClass2) / (double)(numClasses));
+
+        System.out.println((kidsInClass1 + kidsInClass2) / (numClasses));
 
     }
 }

@@ -6,21 +6,17 @@ public class zybooks {
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        double x;
-        double y;
-        double z;
+        int num1 = scnr.nextInt();
+        int num2 = scnr.nextInt();
+        int num3 = scnr.nextInt();
 
-        int kidsInClass1;
-        int kidsInClass2;
-        int numClasses;
-
-        kidsInClass1 = 7;
-        kidsInClass2 = 6;
-        numClasses = 2;
-
-        System.out.println((double)(kidsInClass1 + kidsInClass2) / (double)(numClasses));
-
-        System.out.println((kidsInClass1 + kidsInClass2) / (numClasses));
+        if ((num1 <= num2) && (num1 <= num3)) {
+            System.out.println(num1);
+        } else if ((num2 <= num1) && (num2 <= num3)) {
+            System.out.println(num2);
+        } else if ((num3 <= num1) && (num3 <= num2)) {
+            System.out.println(num3);
+        }
 
     }
 }

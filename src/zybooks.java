@@ -6,17 +6,36 @@ public class zybooks {
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        int num1 = scnr.nextInt();
-        int num2 = scnr.nextInt();
-        int num3 = scnr.nextInt();
+        int highwayNumber;
+        int primaryNumber;
 
-        if ((num1 <= num2) && (num1 <= num3)) {
-            System.out.println(num1);
-        } else if ((num2 <= num1) && (num2 <= num3)) {
-            System.out.println(num2);
-        } else if ((num3 <= num1) && (num3 <= num2)) {
-            System.out.println(num3);
+        System.out.println("Highway number: ");
+        highwayNumber = scnr.nextInt();
+
+        if (((highwayNumber % 100) > 0) && (highwayNumber < 1000)) {
+            primaryNumber = highwayNumber % 100;
+
+            if ((highwayNumber % 2) == 0) {
+                if (highwayNumber < 100) {
+                    System.out.println("I-" + highwayNumber + " is primary, going east/west.");
+                } else {
+                    System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going east/west.");
+                }
+            } else {
+                if (highwayNumber < 100) {
+                    System.out.println("I-" + highwayNumber + " is primary, going north/south.");
+                } else {
+                    System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going north/south.");
+                }
+            }
+
+        } else {
+            System.out.println(highwayNumber + " is not a valid interstate highway number.");
         }
 
     }
 }
+
+//     and service the primary highway indicated by the rightmost two digits. Thus, I-405 services I-5, and I-290 services I-90.
+
+//        Given a highway number, indicate whether it is a primary or auxiliary highway. If auxiliary, indicate what primary highway it serves. Also indicate if the (primary) highway runs north/south or east/west.

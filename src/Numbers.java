@@ -39,13 +39,12 @@ public class Numbers {
                     System.out.println("Largest value: " + num2);
                 }
             }
-
-            // Write a program that asks the computer to enter three values.
-            //Each of these values must be integers between 10 and 30
-            //The program shall find out the smallest and the largest of the three
-            //Display them using System.out.println():. If the three values are the same,
-            //the program shall display "Multiple values identical".
-
         }
     }
 }
+
+// Write a program that asks the computer to enter three values.
+//Each of these values must be integers between 10 and 30
+//The program shall find out the smallest and the largest of the three
+//Display them using System.out.println():. If the three values are the same,
+//the program shall display "Multiple values identical".

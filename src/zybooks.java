@@ -6,31 +6,52 @@ public class zybooks {
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        int highwayNumber;
-        int primaryNumber;
+        int totalChange = scnr.nextInt();
 
-        System.out.println("Highway number: ");
-        highwayNumber = scnr.nextInt();
+        int dollars;
+        int quarters;
+        int dimes;
+        int nickels;
+        int pennies;
 
-        if (((highwayNumber % 100) > 0) && (highwayNumber < 1000)) {
-            primaryNumber = highwayNumber % 100;
+        if (totalChange <= 0) {
+            System.out.println("No change");
+        } else {
+            dollars = totalChange / 100;
+            quarters = (totalChange % 100) / 25;
+            dimes = ((totalChange % 100) % 25) / 10;
+            nickels = (((totalChange % 100) % 25) % 10) / 5;
+            pennies = ((((totalChange % 100) % 25) % 10) % 5);
 
-            if ((highwayNumber % 2) == 0) {
-                if (highwayNumber < 100) {
-                    System.out.println("I-" + highwayNumber + " is primary, going east/west.");
-                } else {
-                    System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going east/west.");
-                }
-            } else {
-                if (highwayNumber < 100) {
-                    System.out.println("I-" + highwayNumber + " is primary, going north/south.");
-                } else {
-                    System.out.println("I-" + highwayNumber + " is auxiliary, serving I-" + primaryNumber + ", going north/south.");
-                }
+            if (dollars == 1) {
+                System.out.println(dollars + " Dollar");
+            } else if (dollars > 1) {
+                System.out.println(dollars + " Dollars");
             }
 
-        } else {
-            System.out.println(highwayNumber + " is not a valid interstate highway number.");
+            if (quarters == 1) {
+                System.out.println(quarters + " Quarter");
+            } else if (quarters > 1) {
+                System.out.println(quarters + " Quarters");
+            }
+
+            if (dimes == 1) {
+                System.out.println(dimes + " Dime");
+            } else if (dimes > 1) {
+                System.out.println(dimes + " Dimes");
+            }
+
+            if (nickels == 1) {
+                System.out.println(nickels + " Nickel");
+            } else if (nickels > 1) {
+                System.out.println(nickels + " Nickels");
+            }
+
+            if (pennies == 1) {
+                System.out.println(pennies + " Penny");
+            } else if (pennies > 1) {
+                System.out.println(pennies + " Pennies");
+            }
         }
 
     }

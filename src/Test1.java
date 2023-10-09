@@ -4,19 +4,20 @@ public class Test1 {
     public static void main(String[] args) {
         Scanner scnr = new Scanner(System.in);
 
-        System.out.println("Month: ");
-        String month = scnr.nextLine();
+        System.out.println("Enter first number:");
+        int x = scnr.nextInt();
 
-        System.out.println("Day: ");
-        int day = scnr.nextInt();
+        System.out.println("Enter second number: ");
+        int y = scnr.nextInt();
 
-        System.out.println("Year: ");
-        int year = scnr.nextInt();
-
-        if ((month.equals("February")) && (day == 22) & (year == 2022)) {
-            System.out.println("This is a palindrome day");
+        if ((x == 81) || (y == 81)) {
+            System.out.println("True");
+        } else if ((x + y) == 81) {
+            System.out.println("True");
+        } else if (Math.pow(x, y) == 81) {
+            System.out.println("True");
         } else {
-            System.out.println("This is not a palindrome day");
+            System.out.println("False");
         }
 
     }

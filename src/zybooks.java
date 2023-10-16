@@ -6,26 +6,20 @@ public class zybooks {
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        int nextChoice;
+        char charInput;
+        int sumChars;
 
-        nextChoice = scnr.nextInt();
+        sumChars = 0;
+        charInput = scnr.next().charAt(0);
 
-        switch (nextChoice) {
-            case 0:
-                System.out.println("Rock");
-                break;
-            case 1:
-                System.out.println("Paper");
-                break;
-            case 2:
-                System.out.println("Scissors");
-                break;
-            default:
-                System.out.println("Unknown");
-                break;
+        while (charInput != 'e') {
+            sumChars++;
+            charInput = scnr.next().charAt(0);
         }
+
+        System.out.println(sumChars);
 
     }
 }
 
-//    Write a switch statement that checks nextChoice. If 0, print "Rock". If 1, print "Paper". If 2, print "Scissors". For any other value, print "Unknown". End with newline.
+//    Character charInput is read from input. Write a while loop that reads characters from input until character 'e' is read. Then, count the total number of characters read. Character 'e' should not be included in the count.

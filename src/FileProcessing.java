@@ -21,34 +21,39 @@ public class FileProcessing {
         double largest = 0;
 
 
-
         while(fileScanner.hasNext()) {
             double currentNum = fileScanner.nextInt();
             sum += currentNum;
             numOfElements++;
-            mean = sum/numOfElements;
-
-            sub = currentNum - mean;
-            pow = Math.pow(sub, 2);
-            sigma = pow + numOfElements;
-            frac = sigma / (numOfElements - 1);
-            stdev = Math.sqrt(frac);
 
             if (numOfElements == 1 || currentNum < smallest) {
                 smallest = currentNum;
             }
-
             if (numOfElements == 1 || currentNum > largest) {
                 largest = currentNum;
             }
-//            String current = fileScanner.nextLine();
-//            System.out.println(current);
         }
+
+        mean = sum/numOfElements;
+
+        fileScanner.close();
+        fileScanner = new Scanner(new File("/Users/ramirez/IdeaProjects/cs1/src/numbers.txt"));
+
+        while(fileScanner.hasNext()) {
+            double currentNum = fileScanner.nextInt();
+
+            sub = currentNum - mean;
+            pow = Math.pow(sub, 2);
+            sigma += pow;
+        }
+
+        frac = sigma / (numOfElements - 1);
+        stdev = Math.sqrt(frac);
+
         System.out.println("Mean: " + mean);
         System.out.println("Standard Deviation: " + stdev);
         System.out.println("Smallest: " + smallest);
         System.out.println("Largest: " + largest);
-
 
     }
 }

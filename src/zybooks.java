@@ -1,31 +1,28 @@
+import java.io.PrintWriter;
+import java.io.StringWriter;
 import java.util.Scanner;
 
 public class zybooks {
     public static void main(String[] args) {
-        Scanner scnr = new Scanner(System.in);
+//        Scanner scnr = new Scanner(System.in);
 //        String str = scnr.nextLine();
 //        int num = scnr.nextInt();
 
-        int result;
-        int stop;
-        int a;
-        int b;
+        String item;
+        int quantity;
+        int discount;
 
-        stop = scnr.nextInt();
-        result = 0;
+        StringWriter itemCharStream = new StringWriter();
+        PrintWriter itemOSS = new PrintWriter(itemCharStream);
 
-        for (a = 0; a < 3; ++a) {
-            System.out.print(a + ": ");
-            for (b = 0; b < 2; ++b) {
-                result += a + b;
-                if (result > stop) {
-                    System.out.print("_ ");
-                    continue;
-                }
-                System.out.print(result + ",");
-            }
-            System.out.println();
-        }
+        item = "Book";
+        quantity = 10;
+        discount = 35;
+
+        itemOSS.println(item + " x" + quantity);
+        itemOSS.print(discount + "% off");
+
+        System.out.print(itemCharStream.toString());
 
     }
 }

@@ -4,19 +4,32 @@ import java.util.Scanner;
 
 public class zybooks {
     public static void main(String[] args) {
+//        Scanner scnr = new Scanner(System.in);
+//        String str = scnr.next();
+//        int num = scnr.nextInt();
+
         Scanner scnr = new Scanner(System.in);
+        String userString;
+        // Add more variables as needed
 
-        boolean cont = true;
+        userString = scnr.next();
+        /* Type your code here. */
 
-        while (cont == true) {
-            String str = scnr.next();
-            int num = scnr.nextInt();
+//        Character.isDigit()
+        boolean isInteger = true;
 
-            if (str.equals("quit") || (num == 0)) {
-                cont = false;
-            } else {
-                System.out.println("Eating " + num + " " + str + " a day keeps you happy and healthy.");
+        for (int i = 0; i < userString.length(); i++) {
+            if (!Character.isDigit(userString.charAt(i))) {
+                isInteger = false;
+                break;
             }
         }
+
+        if (isInteger) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+
     }
 }

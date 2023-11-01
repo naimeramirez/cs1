@@ -4,25 +4,19 @@ import java.util.Scanner;
 
 public class zybooks {
     public static void main(String[] args) {
-//        Scanner scnr = new Scanner(System.in);
-//        String str = scnr.nextLine();
-//        int num = scnr.nextInt();
+        Scanner scnr = new Scanner(System.in);
 
-        String item;
-        int quantity;
-        int discount;
+        boolean cont = true;
 
-        StringWriter itemCharStream = new StringWriter();
-        PrintWriter itemOSS = new PrintWriter(itemCharStream);
+        while (cont == true) {
+            String str = scnr.next();
+            int num = scnr.nextInt();
 
-        item = "Book";
-        quantity = 10;
-        discount = 35;
-
-        itemOSS.println(item + " x" + quantity);
-        itemOSS.print(discount + "% off");
-
-        System.out.print(itemCharStream.toString());
-
+            if (str.equals("quit") || (num == 0)) {
+                cont = false;
+            } else {
+                System.out.println("Eating " + num + " " + str + " a day keeps you happy and healthy.");
+            }
+        }
     }
 }

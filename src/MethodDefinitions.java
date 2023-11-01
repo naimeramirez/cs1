@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.io.File;
 
 public class MethodDefinitions {
     public static void main(String[] args) {
@@ -26,7 +26,7 @@ public class MethodDefinitions {
 
 // 11.   public static double getAVG (double x, double y, double z) { }
 
-    public static void readNumbers (FileProcessing) { }
+// 12.   public static void readNumbers (File numbers) { }
 
 // 13.   public static char getThird (String s) { }
 

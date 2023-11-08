@@ -4,10 +4,10 @@ public class LeibnizPiCalculation {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        double num;
-        double den;
+        double pi = 0;
 
         int n = input.nextInt();
+
         System.out.println("N \t\t Pi");
         System.out.println("---------------------");
         for (int i = 0; i < n; i += 100) {
@@ -27,8 +27,8 @@ public class LeibnizPiCalculation {
     }
 
     public static double getLeibniz(int k) {
-
-        return k;
+        double leibniz = (4 * (getNumerator(k))) / getDenominator(k);
+        return leibniz;
     }
 
 }

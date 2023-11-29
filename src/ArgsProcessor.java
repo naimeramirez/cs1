@@ -1,5 +1,21 @@
+import java.util.Scanner;
+
 public class ArgsProcessor {
     public static void main(String[] a) {
+        Scanner scnr = new Scanner(System.in);
+        String input = scnr.next();
+        int count = 0;
+
+        if (scnr.hasNext()) {
+            count++;
+            int i = 0;
+
+
+        }
+//            count++;
+//            a[count] = scnr.next();
+//        }
+
         System.out.println("Total size: " + a.length);
 
         if (a.length <= 0) {
@@ -10,9 +26,6 @@ public class ArgsProcessor {
             int z = x + y;
             System.out.println("The sum is: " + z);
         }
-
-//        Scanner scnr = new Scanner(System.in);
-//        String input = scnr.next();
 
 //        String[] a;
 //        int sum = 0;

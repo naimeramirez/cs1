@@ -1,4 +1,5 @@
 import java.util.Calendar;
+import java.util.Random;
 
 public class Dollar {
     private int denomination;
@@ -18,6 +19,39 @@ public class Dollar {
         this.face = initializeFace(denomination);
         this.serial = serial;
         this.year = year;
+    }
+
+    public Dollar(int denomination, int year) {
+        this.denomination = denomination;
+        this.face = initializeFace(denomination);
+        this.serial = generateSerial();
+        this.year = year;
+    }
+
+    public int getDenomination() {
+        return denomination;
+    }
+
+    public String getFace() {
+        return face;
+    }
+
+    public String getSerial() {
+        return serial;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public int getAge(int year) {
+        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
+        return currentYear - year;
+    }
+
+    public void showBill(){
+        System.out.println("$" + denomination + ". Face:" + face + ". Serial:" + serial + " is " + getAge(year) + " years old");
+
     }
 
     private String initializeFace(int denomination) {
@@ -52,38 +86,26 @@ public class Dollar {
         return face;
     }
 
-    public int getDenomination() {
-        return denomination;
+    private String generateSerial() {
+        char firstChar = (char) ('a' + new Random().nextInt(26));
+        char lastChar = (char) ('a' + new Random().nextInt(26));
+
+        String digits = "";
+        for (int i = 0; i < 9; i++) {
+            int digit = new Random().nextInt(10);
+            digits += digit;
+        }
+
+        String serialGenerated = firstChar + digits + lastChar;
+
+        return serialGenerated;
     }
 
-    public String getFace() {
-        return face;
-    }
-
-    public String getSerial() {
-        return serial;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public int getAge(int year) {
-        int currentYear = Calendar.getInstance().get(Calendar.YEAR);
-        int age = year - currentYear;
-
-        return age;
-    }
-
-    public static void showBill(){
-        System.out.println("$" + denomination + ". Face:" + face + ". Serial:" + serial + " is " + age + " years old");
-
-    }
-
-    public static void main(String[] args) {
-        Dollar dollar = new Dollar(1, "abcdefgh", 2020);
-
-
-
-    }
+//    public static void main(String[] args) {
+//        Dollar dollar1 = new Dollar(1, "a123456789h", 2020);
+//        Dollar dollar2 = new Dollar(5, 2001);
+//
+//        dollar1.showBill();
+//        dollar2.showBill();
+//    }
 }

@@ -75,7 +75,8 @@ public class Dollar {
         return age;
     }
 
-    public static void showBill() {
+    public static void showBill(){
+        System.out.println("$" + denomination + ". Face:" + face + ". Serial:" + serial + " is " + age + " years old");
 
     }
 
